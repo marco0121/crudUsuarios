@@ -30,10 +30,11 @@ public class UsuarioController {
     public Usuario create(@RequestBody Usuario usuario){
         return usuarioService.save (usuario);
     }
-    @PutMapping("/usuarios")
-    public String update ( @RequestBody Usuario usuario) {
-        return usuarioService.update (usuario);
+    @PutMapping("/usuarios/{id}")
+    public Usuario update(@RequestBody Usuario usuario) {
+        return usuarioService.update(usuario);
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Usuario>deleteById(@PathVariable Long id){
         usuarioService.deleteById (id);

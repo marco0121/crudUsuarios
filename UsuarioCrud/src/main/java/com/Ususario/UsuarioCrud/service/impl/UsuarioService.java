@@ -29,15 +29,17 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public String create (Usuario usuario) {
+    public Usuario create (Usuario usuario) {
         usuarioRepository.save (usuario);
-        return usuario.getNombre ();
+        return usuario;
     }
 
     @Override
-    public String update (Usuario String) {
-   return "se actualizo correctamente";
+    public Usuario update (Usuario usuario) {
+        usuarioRepository.save(usuario);
+        return usuario;
     }
+
 
     @Override
     public void deleteById (Long id) {

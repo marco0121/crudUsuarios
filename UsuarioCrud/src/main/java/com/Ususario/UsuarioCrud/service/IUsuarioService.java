@@ -8,8 +8,10 @@ import java.util.Optional;
 public interface IUsuarioService {
     public List<Usuario>readAll();
     public Optional<Usuario>readById(Long id);
-    public String create (Usuario usuario);
-    public String update(Usuario String);
+    public Usuario create (Usuario usuario);
+
+    Usuario update (Usuario usuario);
+
     public void deleteById(Long id);
     public Usuario save(Usuario usuario);
 }
